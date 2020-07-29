@@ -1,22 +1,23 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-const Button = styled.a`
-  /* This renders the buttons above... Edit me! */
+const Button = styled.button`
+  color: var(--white);
+  border: 1px solid var(--white);
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 16px 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+  text-decoration: none;
   display: inline-block;
-  border-radius: 3px;
-  padding: 0.5rem 0;
-  margin: 0.5rem 1rem;
-  width: 11rem;
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-
-  /* The GitHub button is a primary button
-   * edit this to target it specifically! */
-  ${(props) =>
-    props.primary &&
-    css`
-      background: white;
-      color: black;
-    `}
+  transition: opacity 0.3s;
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 `;
+
+export default Button;
